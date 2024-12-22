@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base ;
+@tailwind components ;
+@tailwind utilities ;
 
 
 @media (prefers-color-scheme: dark) {
@@ -10,21 +10,6 @@
   }
 }
 
-
-[data-theme="dark"] {
-  --background: #1a202c;
-  --text-color: #ffffff;
-}
-
-[data-theme="blue"] {
-  --background: #ebf8ff;
-  --text-color: #2b6cb0;
-}
-
-[data-theme="green"] {
-  --background: #f0fff4;
-  --text-color: #276749;
-}
 
 
 html,

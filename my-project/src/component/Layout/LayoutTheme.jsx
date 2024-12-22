@@ -16,7 +16,7 @@ function LayoutTheme(props) {
 
     return (
         <div
-            className={`flex items-center  justify-between fixed ${show ? "md:right-0 right-0 " : "md:-right-56 -right-56"} transition transition-all ease-linear top-0 bottom-0 `}>
+            className={`flex items-center  justify-between fixed ${show ? "md:right-0 right-0 " : "md:-right-56 -right-56"} transition transition-all ease-linear z-20 top-0 bottom-0 `}>
             <div className="h-full bg-amber-50 dark:bg-gray-800 w-56 flex items-start justify-start shadow flex-col ">
                 <p className="text-black dark:text-white mt-6 mr-5 font-normal text-xl  border-b-2 border-b-slate-200 pb-1 w-48 flex justify-start">شخصی
                     سازی</p>

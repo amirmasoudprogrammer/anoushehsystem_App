@@ -7,7 +7,7 @@ function Header(props) {
     const [open, setOpen] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     return (
-        <div className="bg-white dark:bg-gray-800 dark:border-b-2 dark:border-b-gray-600">
+        <div className="bg-slate-100 dark:bg-gray-800 dark:border-b-2 dark:border-b-gray-600">
             <div className="flex items-center justify-around">
                 <ul className="md:flex hidden uppercase items-center gap-8">
                     <li><Link href="/" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">صفحه اصلی</Link></li>
@@ -57,7 +57,7 @@ function Header(props) {
                 </div>
 
                 {/* mobile menu */}
-                <ul className={`md:hidden dark:bg-gray-800 bg-white absolute w-full h-full bottom-0 py-24 pl-4 duration-500 ${open ? "left-0" : "left-[100%]"} `}>
+                <ul className={`md:hidden dark:bg-gray-800 bg-white z-20 absolute w-full h-full bottom-0 py-24 pl-4 duration-500 ${open ? "left-0" : "left-[100%]"} `}>
                     <li className="hover:text-red-600 px-3 py-3 text-left md:cursor-pointer "><Link className="dark:text-white py-7 text-black" href="/">صفحه اصلی</Link></li>
                     <li className="px-3 py-3 text-left md:cursor-pointer text-black group" onClick={() => setMenuOpen(!menuOpen)}>
                         <div className="dark:hover:text-white flex items-center justify-between " onClick={() => setMenuOpen(!menuOpen)}>
@@ -73,7 +73,7 @@ function Header(props) {
 
                             <span className="dark:text-white">دوره ها</span>
                         </div>
-                        <ul className={`hidden  group-hover:block  hover:block  text-lg relative right-64 p-5  w-40 h-36 grid grid-cols-1 gap-5`}>
+                        <ul className={`hidden   group-hover:block  hover:block  text-lg relative right-64 p-5  w-20 h-36 grid grid-cols-1 gap-5`}>
                             <li className="text-sm text-black mt-5 my-2.5 dark:text-white"><Link href="/">وب</Link></li>
                             <li className="text-sm text-black mt-8 my-2.5 dark:text-white"><Link href="/">اپلکیشن</Link></li>
                         </ul>
@@ -93,7 +93,7 @@ function Header(props) {
 
                             <span className="dark:text-white">صفحات</span>
                         </div>
-                        <ul className={`hidden  group-hover:block  hover:block  text-lg relative right-64 p-5  w-40 h-36 grid grid-cols-1 gap-5`}>
+                        <ul className={`hidden  group-hover:block  hover:block  text-lg relative right-64 p-5  w-20 h-36 grid grid-cols-1 gap-5`}>
                             <li className="text-sm text-black mt-5 my-2.5 dark:text-white"><Link href="/">ورود</Link></li>
                             <li className="text-sm text-black mt-8 my-2.5 dark:text-white"><Link href="/">ثبت نام</Link></li>
                         </ul>
