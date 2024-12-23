@@ -16,8 +16,8 @@ function Banner(props) {
 
 
             </div>
-            <div className="bg-red-400  rounded-full overflow-hidden flex items-center justify-center ">
-                <Image className="-mt-3" src={img1} alt="icon" width={250} height={250}/>
+            <div className="bg-red-300 rounded-full overflow-hidden flex items-center justify-center ">
+                <Image className="-mt-3" src={img1} alt="icon" width={300} height={300}/>
             </div>
         </div>
     );

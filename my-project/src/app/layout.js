@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="fa" dir="rtl">
-        <body className={`${yekan.className} bg-slate-200  dark:bg-gray-800 `}>
+        <body className={`${yekan.className} bg-slate-100  dark:bg-gray-800 `}>
         <Layouts>
             <LayoutTheme>
                 <Background>
