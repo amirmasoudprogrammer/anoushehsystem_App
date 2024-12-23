@@ -7,7 +7,7 @@ import { CgMail } from "react-icons/cg";
 function Footer(props) {
     return (
         <div className="flex flex-col items-center justify-between container mt-8">
-            <div className="text-black md:flex justify-around w-screen items-center border-t-2 border-t-emerald-50 pb-12 w-full m-auto pt-14 bg-slate-100 dark:bg-gray-800   ">
+            <div className="text-black md:flex justify-around w-screen items-center border-t-2 border-t-emerald-50 pb-12 w-full m-auto pt-14  dark:bg-gray-800   ">
                 <ul className="flex flex-col items-center md:items-start mb-8 md:mb-0">
                     <h2 className="text-xl mb-3 text-red-500 font-medium dark:text-white ">mramirmasoud.ir</h2>
                     <li className="font-thin mb-2 group relative w-max dark:text-white">
@@ -100,7 +100,7 @@ function Footer(props) {
                     </Link></li>
                 </ul>
             </div>
-            <div className="text-black dark:text-white flex items-center justify-center w-screen border-t-2 border-t-emerald-50 mt-0.5 m-auto text-center pt-5 bg-slate-100 dark:bg-gray-800 ">
+            <div className="text-black dark:text-white flex items-center justify-center w-screen border-t-2 border-t-emerald-50 mt-0.5 m-auto text-center pt-5  dark:bg-gray-800 ">
                 <Link className="text-red-600 hover:dark:text-amber-100 " href="/">2024 mramirmasoud.ir</Link>
                 <span>Copyright ©</span>
             </div>

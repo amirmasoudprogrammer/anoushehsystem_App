@@ -7,8 +7,8 @@ function Header(props) {
     const [open, setOpen] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     return (
-        <div className="bg-slate-100 dark:bg-gray-800 dark:border-b-2 dark:border-b-gray-600">
-            <div className="flex items-center justify-around">
+        <div className=" dark:bg-gray-800 border-b-2 dark:border-b-2 border-b-sky-100 dark:border-b-gray-600">
+            <div className="flex items-center justify-around ">
                 <ul className="md:flex hidden uppercase items-center gap-8">
                     <li><Link href="/" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">صفحه اصلی</Link></li>
                     <li className="py-7 px-3 inline-block text-black cursor-pointer group ">

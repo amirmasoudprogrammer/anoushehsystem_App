@@ -1,17 +1,9 @@
-"use client"
-import React, {useEffect} from 'react';
-import 'taos/style.css';
+import Banner from "@/component/template/Banner";
 
 function HomePage() {
-    useEffect(() => {
-        import('taos').then((module) => module.init());
-    }, []);
     return (
         <>
-
-            <div>
-                <span className="text-black">amir</span>
-            </div>
+            <Banner/>
         </>
     );
 }

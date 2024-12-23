@@ -1,7 +1,7 @@
 "use client"
 import React, {useState} from 'react';
 
-function LayoutTheme(props) {
+function LayoutTheme({children}) {
     const [show, setShow] = useState(false)
     const [darkmode, setDarkmode] = useState(false);
     const [checkbox, setCheckbox] = useState("");
@@ -15,8 +15,8 @@ function LayoutTheme(props) {
     }
 
     return (
-        <div
-            className={`flex items-center  justify-between fixed ${show ? "md:right-0 right-0 " : "md:-right-56 -right-56"} transition transition-all ease-linear z-20 top-0 bottom-0 `}>
+        <>
+        <div className={`flex items-center  justify-between fixed ${show ? "md:right-0 right-0 " : "md:-right-56 -right-56"} transition transition-all ease-linear z-30 top-0 bottom-0 `}>
             <div className="h-full bg-amber-50 dark:bg-gray-800 w-56 flex items-start justify-start shadow flex-col ">
                 <p className="text-black dark:text-white mt-6 mr-5 font-normal text-xl  border-b-2 border-b-slate-200 pb-1 w-48 flex justify-start">شخصی
                     سازی</p>
@@ -34,8 +34,7 @@ function LayoutTheme(props) {
                 </div>
 
             </div>
-            <div className="flex items-center justify-center  w-10 h-10 cursor-pointer bg-red-600 rounded-l"
-                 onClick={startShow}>
+            <div className="flex items-center justify-center  w-10 h-10 cursor-pointer bg-red-600 rounded-l" onClick={startShow}>
                 {show ? (<div className="hover:animate-pulse  text-4xl text-center flex items-center justify-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor" className="size-6">
@@ -53,6 +52,10 @@ function LayoutTheme(props) {
 
             </div>
         </div>
+                {children}
+        </>
+
+
     );
 }
 

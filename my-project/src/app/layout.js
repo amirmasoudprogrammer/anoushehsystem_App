@@ -2,6 +2,7 @@ import "./globals.css";
 import LayoutTheme from "@/component/Layout/LayoutTheme";
 import {yekan} from "@/utils/fonts";
 import Layouts from "@/component/Layout/Layouts";
+import Background from "@/component/Layout/Background";
 
 
 
@@ -17,8 +18,11 @@ export default function RootLayout({children}) {
         <body className={`${yekan.className} bg-slate-200  dark:bg-gray-800 `}>
         <Layouts>
             <LayoutTheme>
+                <Background>
                 {children}
+                </Background>
             </LayoutTheme>
+
         </Layouts>
         </body>
         </html>
