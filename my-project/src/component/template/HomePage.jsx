@@ -1,6 +1,7 @@
 import Banner from "@/component/template/Banner";
 import Number from "@/component/template/Number";
 import CardHomePage from "@/component/template/CardHomePage";
+import SliderCard from "@/component/template/SliderCard";
 
 function HomePage() {
     return (
@@ -8,6 +9,7 @@ function HomePage() {
             <Banner/>
             <Number/>
             <CardHomePage/>
+            <SliderCard/>
         </>
     );
 }
