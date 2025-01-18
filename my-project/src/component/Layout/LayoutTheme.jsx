@@ -20,7 +20,7 @@ function LayoutTheme({ children }) {
                     show ? "md:right-0 right-0" : "md:-right-56 -right-56"
                 } transition-all ease-linear z-30 top-0 bottom-0`}
             >
-                <div className="h-full bg-amber-50 dark:bg-gray-800 w-56 flex items-start shadow flex-col">
+                <div className="h-full bg-slate-100 dark:bg-gray-800 w-56 flex items-start shadow flex-col">
                     <p className="text-black dark:text-white mt-6 mr-5 font-normal text-xl border-b-2 border-b-slate-200 pb-1 w-48">
                         شخصی‌سازی
                     </p>
