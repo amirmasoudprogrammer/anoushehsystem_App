@@ -7,8 +7,8 @@ import RevealOnScroll from "@/helper/RevealOnScroll";
 function Banner(props) {
     return (
         <RevealOnScroll>
-            <div className="flex md:flex-row flex-col-reverse container items-center justify-around m-auto mt-20">
-                <div className=" text-black flex items-start flex-col justify-between ">
+            <div className="flex md:flex-row flex-col-reverse container items-center justify-between  m-auto mt-20">
+                <div className=" text-black flex items-start flex-col justify-between md:mr-8">
                     <span
                         className="text-black flex items-center md:justify-center m-auto md:m-0 dark:text-white md:text-2xl mb-5 mt-5  md:mt-0 font-thin md:mb-5">سرمایه گذاری در دانش بهترین سود را دارد</span>
                     <p className="text-black dark:text-white md:text-3xl flex items-center justify-center m-auto  md:m-0 md:text-4xl font-normal mb-5">اموزشگاه
@@ -23,7 +23,7 @@ function Banner(props) {
 
 
                 </div>
-                <div className="bg-red-300 rounded-full overflow-hidden flex items-center justify-center ">
+                <div className="bg-red-300 dark:bg-red-400 rounded-full md:ml-28 overflow-hidden flex items-center justify-center ">
                     <Image className="-mt-3" src={img1} alt="icon" width={300} height={300}/>
                 </div>
             </div>

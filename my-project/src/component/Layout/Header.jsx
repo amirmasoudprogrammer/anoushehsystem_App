@@ -8,7 +8,7 @@ function Header(props) {
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <div className=" dark:bg-gray-800 border-b-2 dark:border-b-2 border-b-sky-100 dark:border-b-gray-600">
-            <div className="flex items-center justify-around ">
+            <div className="flex items-center justify-start md:mr-24 ">
                 <ul className="md:flex hidden uppercase items-center gap-8">
                     <li><Link href="/" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">صفحه اصلی</Link></li>
                     <li className="py-7 px-3 inline-block text-black cursor-pointer group ">
@@ -19,13 +19,13 @@ function Header(props) {
                                 <path d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
                             </svg>
                         </div>
-                        <ul className="rounded dark:bg-gray-600 opacity-0 transition transition-transform invisible transform translate-y-11 group-hover:translate-y-0 group-hover:md:opacity-100 group-hover:md:visible hover:md:opacity-100 hover:md:visible text-lg absolute top-50 mt-9 p-5 bg-white w-40 h-36 grid grid-cols-1 gap-5">
-                            <li className="dark:text-white hover:text-red-600 text-sm text-gray-600 my-2.5"><Link href="/">وب</Link></li>
-                            <li className="dark:text-white hover:text-red-600 text-sm text-gray-600 my-2.5"><Link href="/">اپلکیشن</Link></li>
+                        <ul className="rounded dark:bg-gray-600 opacity-0 transition transition-transform invisible transform translate-y-11 group-hover:translate-y-0 group-hover:md:opacity-100 group-hover:md:visible hover:md:opacity-100 hover:md:visible text-lg absolute top-11 mt-9 pb-3 pr-3 bg-white w-56 h-28 grid grid-cols-1 gap-5">
+                            <li className="dark:text-white hover:text-red-600 text-sm text-gray-600 my-2"><Link href="/">وب</Link></li>
+                            <li className="dark:text-white hover:text-red-600 text-sm text-gray-600 my-1"><Link href="/">اپلکیشن</Link></li>
 
                         </ul>
                     </li>
-                    <li className="py-7 px-3 inline-block text-black cursor-pointer group ">
+                    <li className="py-7 px-3 inline-block text-black cursor-pointer duration-200 group ">
                         <div className="hover:text-red-600 dark:hover:text-white flex items-center justify-between">
                             <span className="ml-2 dark:text-white">صفحات</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -33,13 +33,13 @@ function Header(props) {
                                 <path d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
                             </svg>
                         </div>
-                        <ul className="rounded opacity-0 dark:bg-gray-600 invisible group-hover: md:opacity-100 transition transition-transform transform translate-y-11 group-hover:translate-y-0 group-hover:md:visible hover:md:opacity-100 hover:md:visible text-lg absolute top-50 mt-9 p-5 bg-white w-40 h-36 grid grid-cols-1 gap-5">
-                            <li className="hover:text-red-600 text-sm text-gray-600 my-2.5 dark:text-white"><Link href="/">ورود</Link></li>
-                            <li className="hover:text-red-600 text-sm text-gray-600 my-2.5 dark:text-white"><Link href="/">ثبت نام</Link></li>
+                        <ul className="rounded dark:bg-gray-600 opacity-0 transition transition-transform invisible transform translate-y-11 group-hover:translate-y-0 group-hover:md:opacity-100 group-hover:md:visible hover:md:opacity-100 hover:md:visible text-lg absolute top-11 mt-9 pb-3 pr-3 bg-white w-56 h-28 grid grid-cols-1 gap-5">
+                            <li className="hover:text-red-600 text-sm text-gray-600 my-2 dark:text-white"><Link href="/Login">ورود</Link></li>
+                            <li className="hover:text-red-600 text-sm text-gray-600 my-1 dark:text-white"><Link href="/register">ثبت نام</Link></li>
 
                         </ul>
                     </li>
-                    <li><Link href="/" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">تماس با ما</Link></li>
+                    <li><Link href="/Contact" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">تماس با ما</Link></li>
                 </ul>
                 <div className="z-50 p-5 md:w-auto w-full flex justify-between">
                     <div className="text-3xl md:hidden " onClick={() => setOpen(!open)}>
@@ -93,13 +93,13 @@ function Header(props) {
 
                             <span className="dark:text-white">صفحات</span>
                         </div>
-                        <ul className={`hidden  group-hover:block  hover:block  text-lg relative right-64 p-5  w-20 h-36 grid grid-cols-1 gap-5`}>
-                            <li className="text-sm text-black mt-5 my-2.5 dark:text-white"><Link href="/">ورود</Link></li>
-                            <li className="text-sm text-black mt-8 my-2.5 dark:text-white"><Link href="/">ثبت نام</Link></li>
+                        <ul className={`hidden  group-hover:block  hover:block  text-lg relative right-64 p-5 w-20 h-36 grid grid-cols-1 gap-5`}>
+                            <li className="text-sm text-black mt-5 my-2.5 dark:text-white"><Link href="/Login">ورود</Link></li>
+                            <li className="text-sm text-black mt-8 my-2.5 dark:text-white"><Link href="/register">ثبت نام</Link></li>
                         </ul>
 
                     </li>
-                    <li className="hover:text-red-600 px-3 py-3 text-left md:cursor-pointer"><Link className="py-7 dark:text-white text-black" href="/">تماس با ما</Link></li>
+                    <li className="hover:text-red-600 px-3 py-3 text-left md:cursor-pointer"><Link className="py-7 dark:text-white text-black" href="/Contact">تماس با ما</Link></li>
                 </ul>
             </div>
         </div>

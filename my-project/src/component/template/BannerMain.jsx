@@ -8,7 +8,7 @@ function BannerMain(props) {
     return (
         <RevealOnScroll>
             <div
-                className="dark:bg-gray-800 flex mt-28 flex-col md:flex-row items-center justify-around container m-auto bg-slate-100 p-16 md:w-[70%] w-auto rounded shadow-2xl">
+                className="dark:bg-gray-800 mb-24 flex mt-28 flex-col md:flex-row items-center justify-around container m-auto bg-slate-100 p-16 md:w-[70%] w-auto rounded shadow-2xl">
                 <div className="bg-yellow-200 rounded-full overflow-hidden">
                     <Image className="" src={img1} alt="img" width={300} height={300}/>
                 </div>

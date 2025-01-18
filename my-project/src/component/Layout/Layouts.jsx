@@ -6,7 +6,7 @@ function Layouts({children}) {
     return (
         <>
             <Header/>
-            <div className="min-h-screen">
+            <div>
                 {children}
             </div>
             <Footer/>
