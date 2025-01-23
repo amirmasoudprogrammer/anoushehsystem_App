@@ -7,17 +7,15 @@ import {FaRegStarHalfStroke} from "react-icons/fa6";
 
 
 function Cart({data}) {
-    const {price, title, Category, image, author} = data
+    const {id,price, title, Category, image, author} = data
     return (
-        <Link href="/" className="group mt-8 md:mt-0">
+        <Link href={`/Courses/${id}`} className="group mt-8 md:mt-0">
             <div className="m-3  ">
-                <div className="absolute md:w-64 w-72 flex items-center justify-between mr-5 mt-3">
-                    <span
-                        className="bg-red-500 w-20 h-8 pt-2.5 pb-1 rounded flex items-center justify-center">{price}</span>
-                    <span
-                        className="bg-red-500 w-auto  pl-1 pr-1 font-thin rounded flex items-center justify-center">{Category}</span>
+                <div className="absolute md:w-60 w-60  flex items-center justify-between mr-5 mt-3">
+                    <span className="bg-red-500 w-20 h-8 pt-2.5 pb-1 rounded flex items-center justify-center ">{price}</span>
+                    <span className="bg-red-500 w-auto  pl-1 pr-1 font-thin rounded flex items-center justify-center">{Category}</span>
                 </div>
-                <Image className="rounded w-35" src={image} alt="img" width={400} height={400}/>
+                <Image className="rounded w-72 h-auto" src={image} alt="img" width={400} height={400}/>
             </div>
             <div className="flex flex-col ">
                 <span

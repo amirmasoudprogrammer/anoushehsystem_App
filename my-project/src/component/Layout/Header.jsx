@@ -13,7 +13,7 @@ function Header(props) {
                     <li><Link href="/" className="hover:text-red-600 py-7 px-3 inline-block text-black dark:text-white">صفحه اصلی</Link></li>
                     <li className="py-7 px-3 inline-block text-black cursor-pointer group ">
                         <div className="hover:text-red-600  dark:hover:text-white flex items-center text-center justify-between">
-                            <span className="ml-2 dark:text-white">دوره ها</span>
+                            <Link href="/Courses" className="ml-2 dark:text-white">دوره ها</Link>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor" className="size-5 -mt-1">
                                 <path d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
