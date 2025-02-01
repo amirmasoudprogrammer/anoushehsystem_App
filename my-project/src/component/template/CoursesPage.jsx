@@ -1,14 +1,14 @@
 "use client"
 import React, {useState} from 'react';
 import Link from "next/link";
-import {DataCourses} from "@/helper/DataCourses";
+import DataCourses from "@/helper/DataCourses";
 import {FaAnglesLeft} from "react-icons/fa6";
 import {FaAngleDoubleRight} from "react-icons/fa";
 import {FaAngleLeft} from "react-icons/fa";
 import {FaAngleRight} from "react-icons/fa";
 import DataCards from "@/helper/DataCards";
 import dataCards from "@/helper/DataCards";
-import Cart from "@/component/module/Cart";
+import Cart from "@/component/Module/Cart";
 
 
 function CoursesPage(props) {
@@ -35,7 +35,8 @@ function CoursesPage(props) {
                 <div className="mt-20 flex flex-col items-center ">
                     <div className="text-center">
                         <span className="text-red-400 text-2xl font-thin">دوره های ما</span>
-                        <p className="text-gray-600 font-medium mt-2 dark:text-white text-3xl">دوره مد نظر خود را پیدا کنید </p>
+                        <p className="text-gray-600 font-medium mt-2 dark:text-white text-3xl">دوره مد نظر خود را پیدا
+                            کنید </p>
                     </div>
                     <div className="flex items-center justify-center ">
                         {DataCourses.map((item) => (
@@ -68,21 +69,34 @@ function CoursesPage(props) {
                     </div>
                 </div>
                 <div className="flex items-center justify-center mt-36">
-                    <span className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin rounded-r-xl dark:text-white"><FaAngleDoubleRight/></span>
-                    <span className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin dark:text-white"><FaAngleRight/></span>
+                    <span
+                        className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin rounded-r-xl dark:text-white"><FaAngleDoubleRight/></span>
+                    <span
+                        className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin dark:text-white"><FaAngleRight/></span>
                     <div className="text-center text-black flex items-center justify-between  ">
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">20</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">...</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">14</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">13</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">12</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">11</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">10</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">...</span>
-                        <span className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">1</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">20</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">...</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">14</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">13</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">12</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">11</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">10</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">...</span>
+                        <span
+                            className="text-black text-[15px] mt-2 cursor-pointer hover:bg-red-500 hover:text-white p-2 md:w-10 md:h-10 font-thin dark:text-white">1</span>
                     </div>
-                    <span className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin dark:text-white"><FaAngleLeft/></span>
-                    <span className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin rounded-l-xl dark:text-white"><FaAnglesLeft/></span>
+                    <span
+                        className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin dark:text-white"><FaAngleLeft/></span>
+                    <span
+                        className="text-black text-[10px] hover:bg-red-500 w-10 h-10 flex items-center justify-center hover:text-white font-thin rounded-l-xl dark:text-white"><FaAnglesLeft/></span>
 
 
                 </div>

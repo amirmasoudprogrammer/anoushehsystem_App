@@ -32,7 +32,7 @@ function Cart({data}) {
                     <span><FaStar/></span>
                     <span><FaStar/></span>
                     <span><FaStar/></span>
-                    <p className="text-black font-thin text-sm">(504)</p>
+                    <p className="text-black font-thin text-sm dark:text-gray-300">(504)</p>
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import dataCards from "@/helper/DataCards";
-import Cart from "@/component/module/Cart";
+import Cart from "@/component/Module/Cart";
 import RevealOnScroll from "@/helper/RevealOnScroll";
 
 

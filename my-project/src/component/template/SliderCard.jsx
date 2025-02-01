@@ -14,7 +14,7 @@ import Image from "next/image";
 import svg1 from "@/../public/arrow-left.svg"
 import svg2 from "@/../public/arrow-right.svg"
 import Data from "@/helper/DataSlider";
-import CardSlide from "@/component/module/CardSlide";
+import CardSlide from "@/component/Module/CardSlide";
 import RevealOnScroll from "@/helper/RevealOnScroll";
 
 

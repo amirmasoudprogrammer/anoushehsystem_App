@@ -1,95 +1,110 @@
-"use client"
-import React, {useState} from 'react';
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
-import {FaRegStarHalfStroke, FaStar} from "react-icons/fa6";
-import {DataCoursesLayout} from "@/helper/DataCourses";
+import { FaStarHalfAlt, FaStar } from "react-icons/fa";
 import Image from "next/image";
+import Headline from "@/component/Module/Headline";
+import Description from "@/component/Module/Description";
+import Teacher from "@/component/Module/Teacher";
+import Comments from "@/component/Module/Comments";
 
+const tabs = [
+    { name: "سرفصل", component: () => <Headline /> },
+    { name: "توضیحات", component: () => <Description /> },
+    { name: "مدرس", component: () => <Teacher /> },
+    { name: "نظرات", component: () => <Comments /> }
+];
 
-function CardDetails({data}) {
-    const {id, title, Category, Description, author, image, price} = data
+function CardDetails({ data }) {
+    const [activeId, setActiveId] = useState(0);
+    const ActiveComponent = tabs[activeId].component;
+    const { title, author, image, price } = data;
 
-    const [activeItem, setActiveItem] = useState(null);
-    const handleClick = (id) => {
-        setActiveItem(id);
-    };
     return (
         <>
-            <div className="mt-10 container m-auto  ">
-                <div className="flex mr-8">
-                    <Link href="/" className="text-red-400 ml-2 dark:text-white">صفحه اصلی </Link>
-                    <span className="text-black font-thin dark:text-white">/</span>
-                    <Link href="/Courses" className="text-red-400 font-thin mr-3 dark:text-white">دوره ها</Link>
-                    <span className="text-black font-thin mr-2 dark:text-white">/</span>
-                    <span className="text-black font-thin mr-3 dark:text-white"> اموزش {title} </span>
-
+            <div className="mt-10 container mx-auto px-4">
+                <div className="flex flex-wrap text-sm md:text-base">
+                    <Link href="/" className="text-red-400 ml-2 dark:text-white">صفحه اصلی</Link>
+                    <span className="text-gray-500 dark:text-gray-300">/</span>
+                    <Link href="/Courses" className="text-red-400 font-thin mx-2 dark:text-white">دوره ها</Link>
+                    <span className="text-gray-500 dark:text-gray-300">/</span>
+                    <span className="text-gray-700 font-thin dark:text-white">آموزش {title}</span>
                 </div>
             </div>
-            <div className="flex container items-start justify-center mr-20 mt-16">
-                <div className="flex flex-col items-start justify-start ">
-                    <div className="bg-slate-50 rounded shadow-lg w-[800px] h-64  pr-8 pt-6 flex flex-col items-start">
-                        <span className="text-3xl font-medium text-gray-500 "> اموزش {title}</span>
+
+            <div className="flex flex-col md:flex-row container mx-auto items-start justify-center mt-10 px-4">
+                <div className="flex flex-col w-full md:w-auto items-start">
+                    <div className="bg-gray-100 dark:bg-gray-800 rounded shadow-lg w-full md:w-[800px] h-auto p-6">
+                        <span className="text-lg md:text-3xl font-medium text-gray-700 dark:text-white">
+                            آموزش {title}
+                        </span>
                         <div className="text-yellow-400 flex mt-3">
-                            <p>(4,5)</p>
-                            <span><FaRegStarHalfStroke/></span>
-                            <span><FaStar/></span>
-                            <span><FaStar/></span>
-                            <span><FaStar/></span>
-                            <span><FaStar/></span>
-                            <p className="text-black font-thin text-sm">(230 نظر) </p>
+                            <p>(4.5)</p>
+                            <span><FaStarHalfAlt /></span>
+                            <span><FaStar /></span>
+                            <span><FaStar /></span>
+                            <span><FaStar /></span>
+                            <span><FaStar /></span>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm ml-2">(230 نظر)</p>
                         </div>
-                        <span className="text-black font-thin mt-2">دانش اموزان دوره - 220</span>
-                        <p className="text-black mt-2"> مدرس- <strong
-                            className="text-red-400 font-thin mr-1">{author}</strong></p>
-                        <span className="text-black font-thin mt-2">آخرین بروزرسانی - آبان 1401</span>
-                        <span className="text-black mt-2 font-thin">زبان - فارسی</span>
+                        <span className="text-gray-700 dark:text-gray-300 mt-2">دانش‌آموزان دوره - 220</span>
+                        <p className="text-gray-700 dark:text-gray-300 mt-2">
+                            مدرس - <strong className="text-red-400 font-thin">{author}</strong>
+                        </p>
+                        <span className="text-gray-700 dark:text-gray-300 mt-2">آخرین بروزرسانی - آبان 1401</span>
+                        <span className="text-gray-700 dark:text-gray-300 mt-2">زبان - فارسی</span>
                     </div>
-                    <div className="flex flex-col mt-14 items-start justify-start ml-20  ">
-                        <div className="flex items-start justify-between w-[450px] ">
-                            {DataCoursesLayout.map((item) =>
-                                <Link href={item.href} key={item.id} onClick={() => handleClick(item.id)}
-                                      className={`rounded shadow-lg w-24 h-10  text-black font-thin flex items-center justify-center ${activeItem === item.id ? "bg-red-500 text-white transition" : "bg-slate-50"}`}>
-                                    {item.name}
-                                </Link>
-                            )}
+
+                    <div className="flex flex-col mt-8 w-full">
+                        <div className="flex flex-wrap gap-2 md:w-[450px]">
+                            {tabs.map((tab, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setActiveId(index)}
+                                    className={`rounded shadow-lg px-4 py-2 text-sm md:text-base transition-all ${
+                                        activeId === index
+                                            ? "bg-red-500 text-white"
+                                            : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
+                                    }`}
+                                >
+                                    {tab.name}
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="mt-6 w-full">
+                            <ActiveComponent />
                         </div>
                     </div>
                 </div>
-                <div className="rounded mr-10 w-[400px] bg-slate-50 flex flex-col shadow-lg h-[580px]">
-                    <div className="w-96 h-auto flex items-center justify-center mt-9 m-auto mb-0">
-                        <Image className="rounded  w-[350px] h-auto" src={image} alt="img" width={400} height={400}/>
-                    </div>
-                    <div className="flex items-center justify-start pr-6 pt-5">
-                        <span className="text-black font-thin"><del>100.000</del></span>
-                        <span className="text-black text-3xl font-medium mr-2">{price}</span>
-                        <span className="text-red-400  font-medium mr-2">51% تخفیف</span>
-                    </div>
-                    <div className="flex flex-col items-start">
-                        <p className="text-gray-600 text-2xl font-medium pr-7 pt-5">ویژگی های دوره</p>
-                        <ul className="flex flex-col pr-6 pt-2 mt-2">
-                            <div className="flex items-center justify-start w h-8">
-                                <span className="text-red-400 text-5xl mb-2">.</span>
-                                <li className="text-black mr-3 font-thin">150 درس</li>
-                            </div>
-                            <div className="flex items-center justify-start w h-8">
-                                <span className="text-red-400 text-5xl mb-2">.</span>
-                                <li className="text-black mr-3 font-thin">پروژه محور</li>
-                            </div>
-                            <div className="flex items-center justify-start w h-8">
-                                <span className="text-red-400 text-5xl mb-2">.</span>
-                                <li className="text-black mr-3 font-thin">پشتیبانی رایگان</li>
-                            </div>
-                        </ul>
 
+                <div className="rounded-md mt-10 md:mr-10 md:mt-0 md:ml-10 w-full md:w-[400px] bg-gray-100 dark:bg-gray-800 shadow-lg p-6">
+                    <div className="w-full flex justify-center">
+                        <Image className="rounded w-[300px] md:w-[350px]" src={image} alt="img" width={400} height={400} />
                     </div>
-                    <div className="flex items-center justify-center mb-10 ">
-                        <button type="button" className="w-[350px] shadow-lg hover:bg-red-600 transition-all h-auto mt-5 bg-red-500 p-2 rounded">
+                    <div className="flex items-center justify-between mt-5">
+                        <span className="text-gray-700 dark:text-gray-300"><del>100.000</del></span>
+                        <span className="text-3xl font-medium text-gray-800 dark:text-white">{price}</span>
+                        <span className="text-red-400 font-medium">51% تخفیف</span>
+                    </div>
+                    <div className="mt-5">
+                        <p className="text-gray-800 dark:text-white text-lg font-medium">ویژگی‌های دوره</p>
+                        <ul className="mt-2 space-y-1">
+                            <li className="text-gray-700 dark:text-gray-300">150 درس</li>
+                            <li className="text-gray-700 dark:text-gray-300">پروژه محور</li>
+                            <li className="text-gray-700 dark:text-gray-300">پشتیبانی رایگان</li>
+                        </ul>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                        <button
+                            type="button"
+                            className="w-full md:w-[350px] shadow-lg hover:bg-red-600 transition-all py-2 bg-red-500 rounded text-white"
+                        >
                             خرید دوره
                         </button>
                     </div>
                 </div>
             </div>
-
         </>
     );
 }

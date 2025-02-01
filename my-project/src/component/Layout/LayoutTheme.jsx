@@ -18,14 +18,12 @@ function LayoutTheme({ children }) {
             <div
                 className={`flex items-center justify-between fixed ${
                     show ? "md:right-0 right-0" : "md:-right-56 -right-56"
-                } transition-all ease-linear z-30 top-0 bottom-0`}
-            >
-                <div className="h-full bg-slate-100 dark:bg-gray-800 w-56 flex items-start shadow flex-col">
+                } transition-all ease-linear z-30 top-0 bottom-0`}><div className="h-full bg-slate-100 dark:bg-gray-800 w-56 flex items-start shadow flex-col">
                     <p className="text-black dark:text-white mt-6 mr-5 font-normal text-xl border-b-2 border-b-slate-200 pb-1 w-48">
                         شخصی‌سازی
                     </p>
                     <div className="flex items-center justify-between w-60 pr-5 pl-7 pt-3">
-                        <span className="text-black dark:text-white">حالت شب</span>
+                        <span className="text-black dark:text-white">{darkmode ? "حالت شب" : "حالت روز" }</span>
                         <label className="relative inline-block h-7 w-[48px] cursor-pointer rounded-full bg-gray-900 transition">
                             <input
                                 type="checkbox"
